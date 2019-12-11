@@ -11,3 +11,7 @@
     align-content: center;
     width: 700px;
 }
+
+.col-sm-6 {
+    padding-top: 0.9em;
+}
