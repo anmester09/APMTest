@@ -1,0 +1,13 @@
+.main-title {
+    color: aqua;
+}
+
+#homepage {
+    padding-top: 4em;
+    padding-left: 0.9em
+}
+
+.row {
+    align-content: center;
+    width: 700px;
+}
