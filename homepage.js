@@ -5,31 +5,57 @@ window.addEventListener('load', (event) => {
 //add event listeners to purchase button
 function addButtonListeners() {
     let purchaseButtons = document.querySelectorAll("#purchase");
-    console.log(purchaseButtons)
+    let addToCartButtons = document.querySelectorAll('#add-to-cart')
+    
     purchaseButtons.forEach(function(elem) {
         elem.addEventListener("click", recordPurchase);
-        console.log('in event')
+    });
+
+    addToCartButtons.forEach(function(elem) {
+        elem.addEventListener("click", recordAddToCart);
     });
 }
 
 //fire event to record purchase 
 function recordPurchase(event) {
-    let targetProductSKU = event.target.dataset.id
-    console.log(event.target.dataset)
+    let targetProductSKU = event.target.dataset.sku
+    let targetItemPrice = event.target.dataset.price
+
     DY.API("event", {
         name: "Purchase",
         properties: {
             uniqueTransactionId: `${Math.random()}`,
             dyType: 'purchase-v1',
-            value: event.target.dataset.value,
+            value: targetItemPrice,
             cart: [
                 {
                     productId: `${targetProductSKU}`,
                     quantity: 1,
-                    itemPrice: event.target.dataset.value
+                    itemPrice: targetItemPrice
                 }
             ]
         }
     })
+}
 
+//fire event to record add to cart
+function recordAddToCart(event) {
+    let targetProductSKU = event.target.dataset.sku
+    let targetItemPrice = event.target.dataset.price
+
+    DY.API("event", {
+        name: "Add to Cart",
+        properties: {
+            uniqueTransactionId: `${Math.random()}`,
+            dyType: 'add-to-cart-v1',
+            value: targetItemPrice,
+            cart: [
+                {
+                    productId: `${targetProductSKU}`,
+                    quantity: 1,
+                    itemPrice: targetItemPrice
+                }
+            ]
+        }
+    })
 }
