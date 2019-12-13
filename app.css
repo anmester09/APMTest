@@ -4,6 +4,10 @@
     margin-right: 1em
 }
 
+#homepage-banner {
+    height: 250px;
+}
+
 .row {
     align-content: center;
 }
