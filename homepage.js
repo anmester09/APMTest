@@ -9,10 +9,12 @@ function addButtonListeners() {
     
     purchaseButtons.forEach(function(elem) {
         elem.addEventListener("click", recordPurchase);
+        console.log('purchase event added')
     });
 
     addToCartButtons.forEach(function(elem) {
         elem.addEventListener("click", recordAddToCart);
+        console.log('add to cart event added')
     });
 }
 
