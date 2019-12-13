@@ -6,6 +6,7 @@ window.addEventListener('load', (event) => {
 function addButtonListeners() {
     let purchaseButtons = document.querySelectorAll("#purchase");
     let addToCartButtons = document.querySelectorAll('#add-to-cart')
+    console.log('purchase buttons', purchaseButtons, 'add to cart buttons', addToCartButtons
     
     purchaseButtons.forEach(function(elem) {
         elem.addEventListener("click", recordPurchase);
