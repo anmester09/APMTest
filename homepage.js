@@ -20,7 +20,7 @@ function addButtonListeners() {
 function recordPurchase(event) {
     let targetProductSKU = event.target.dataset.sku
     let targetItemPrice = event.target.dataset.price
-
+    console.log('recording purchase')
     DY.API("event", {
         name: "Purchase",
         properties: {
@@ -42,6 +42,7 @@ function recordPurchase(event) {
 function recordAddToCart(event) {
     let targetProductSKU = event.target.dataset.sku
     let targetItemPrice = event.target.dataset.price
+    console.log('adding to cart')
 
     DY.API("event", {
         name: "Add to Cart",
