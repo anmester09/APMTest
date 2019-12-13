@@ -1,5 +1,6 @@
 window.addEventListener('load', (event) => {
     addButtonListeners()
+    console.log('hi')
 });
 
 //add event listeners to purchase button
