@@ -21,3 +21,14 @@
 .col-sm-6 {
     padding-top: 0.9em;
 }
+
+#quiz-page {
+    padding-top: 4em;
+    margin-left: 1em;
+    margin-right: 1em
+}
+
+.quiz-card {
+    width: 700px;
+    height: 450px;
+}
