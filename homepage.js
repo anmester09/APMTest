@@ -150,7 +150,7 @@ function getQuizRecommendations() {
     DY.API('event', {name: 'quiz_results', properties: {
         'style': userData.q1,
         'gender': userData.q2,
-        'age': userData.q3;
+        'age': userData.q3
     }})
     showQuizResults()
 }
