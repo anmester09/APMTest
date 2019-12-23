@@ -142,7 +142,7 @@ function quizQuestion3(event) {
 }
 
 function getQuizRecommendations() {
-    let quizFinalPage = document.querySelector('.card-body.quiz-recs')
+    
     DY.API('event', {name: 'quiz_results', properties: {
         'style': userData.q1,
         'gender': userData.q2,
@@ -154,6 +154,7 @@ function getQuizRecommendations() {
 // show quiz results
 function showQuizResults() {
     console.log('this worked')
+    let quizFinalPage = document.querySelector('.card-body.quiz-recs')
     let targetEl = event.target.parentNode
     targetEl.style.display = 'none'
     quizFinalPage.style.visibility = ''
