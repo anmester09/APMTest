@@ -152,9 +152,11 @@ function getQuizRecommendations() {
         'gender': userData.q2,
         'age': userData.q3
     }})
+    
     showQuizResults()
 }
 
+// show quiz results
 function showQuizResults() {
     console.log('this worked')
     quizFinalPage.style.visibility = ''
