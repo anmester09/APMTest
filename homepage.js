@@ -142,22 +142,19 @@ function quizQuestion3(event) {
 }
 
 function getQuizRecommendations() {
-    console.log(userData)
-    let targetEl = event.target.parentNode
-    targetEl.style.display = 'none'
-
     let quizFinalPage = document.querySelector('.card-body.quiz-recs')
     DY.API('event', {name: 'quiz_results', properties: {
         'style': userData.q1,
         'gender': userData.q2,
         'age': userData.q3
     }})
-    
     showQuizResults()
 }
 
 // show quiz results
 function showQuizResults() {
     console.log('this worked')
+    let targetEl = event.target.parentNode
+    targetEl.style.display = 'none'
     quizFinalPage.style.visibility = ''
 }
