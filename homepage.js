@@ -147,5 +147,15 @@ function getQuizRecommendations() {
     targetEl.style.display = 'none'
 
     let quizFinalPage = document.querySelector('.card-body.quiz-recs')
+    DY.API('event', {name: 'quiz_results', properties: {
+        'style': userData.q1,
+        'gender': userData.q2,
+        'age': userData.q3;
+    }})
+    showQuizResults()
+}
+
+function showQuizResults() {
+    console.log('this worked')
     quizFinalPage.style.visibility = ''
 }
